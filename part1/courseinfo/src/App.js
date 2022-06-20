@@ -21,11 +21,13 @@ const App = () => {
   );
   const Total = (props) => <p>Number of exercises {props.total}</p>;
 
-  const Content = (props) => {
-    return props.content.map(({ part, exercises }) => (
-      <Part part={part} exercises={exercises} key={part} />
-    ));
-  };
+  const Content = () => (
+    <div>
+      <Part part={part1} exercises={exercises1} />
+      <Part part={part2} exercises={exercises2} />
+      <Part part={part3} exercises={exercises3} />
+    </div>
+  );
 
   return (
     <div>
